@@ -2,7 +2,7 @@
   "name": "one-question",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "start": "npm run webpack -- --watch",
     "test": "node_modules/.bin/karma start react/karma.conf.js",
