@@ -1,7 +1,5 @@
 .bundle.js
 .DS_store
 config/database.yml
-Gemfile.lock
 .sass-cache
-package-lock.json
 node_modules
