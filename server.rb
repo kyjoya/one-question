@@ -32,3 +32,10 @@ end
 get '/api/v1/questions' do
   { questions: Question.all }.to_json
 end
+
+get '/api/v1/random-question' do
+  offset = rand(Question.count)
+  random_question = Question.offset(offset).first
+
+  { random_question: random_question }.to_json
+end
