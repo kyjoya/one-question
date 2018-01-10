@@ -2,8 +2,8 @@ import React from "react"
 
 const Button = (props) => {
   return(
-    <div onClick={(e) => props.handleClick(e)}>
-      <input className="button-primary" type="submit" value="random question"/>
+    <div className="center" onClick={(e) => props.handleClick(e)}>
+      <input className={`oq-button-primary ${props.buttonStatus}`} type="submit" value="?"/>
     </div>
   )
 }

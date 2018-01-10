@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Hind|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One');
 
-$hind: 'Hind', sans-serif;
-$open-sans: 'Open Sans', sans-serif;
+$fjalla: 'Fjalla One', sans-serif;
+$cantarell: 'Cantarell', sans-serif;
 
 *
 {
@@ -11,6 +11,16 @@ $open-sans: 'Open Sans', sans-serif;
 
 body
 {
-	font: 100% $open-sans;
+	font: 100% $cantarell;
   color: #000;
+}
+
+h1 {
+  font: 75px $fjalla;
+  letter-spacing: 4px;
+  color: #ECF0F1;
+}
+
+.center {
+  text-align: center;
 }

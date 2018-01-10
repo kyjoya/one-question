@@ -26,6 +26,13 @@
   transform: translateY(-50%);
 }
 
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
 @mixin gradient {
   -webkit-animation: gradientBackground 20s ease infinite;
   -moz-animation: gradientBackground 20s ease infinite;
@@ -46,4 +53,11 @@
       50%{background-position:100% 50%}
       100%{background-position:0% 50%}
   }
+}
+
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    transform: rotate($degrees);
 }

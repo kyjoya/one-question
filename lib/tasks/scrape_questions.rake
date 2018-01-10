@@ -1,4 +1,6 @@
 task :scrape_questions do
+  Question.delete_all
+
   url = "http://www.signupgenius.com/business/icebreakerquestionswork.cfm"
   data = Nokogiri::HTML(open(url))
   questions = data.css('td.main').css('li').text.strip
@@ -11,12 +13,12 @@ task :scrape_questions do
       question_string += char
     else
       question_string += "?"
-      parsed_questions << question_string
+      parsed_questions << question_string.gsub(/\A[[:space:]]+|[[:space:]]+\z/, '')
       question_string = ""
     end
   end
 
   parsed_questions.each do |question|
-    Question.create(question: question)
+    Question.find_or_create_by(question: question)
   end
 end

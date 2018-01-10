@@ -7,7 +7,9 @@ class QuestionIndex extends Component {
     super(props)
     this.state = {
       question: "",
-      hide: true
+      questionTransition: "",
+      buttonWidth: "twelve columns",
+      buttonStatus: ""
     }
 
     this.handleRandomRequest = this.handleRandomRequest.bind(this);
@@ -29,7 +31,9 @@ class QuestionIndex extends Component {
     .then(responseBody => {
       this.setState({
         question: responseBody.random_question.question,
-        hide: false
+        questionTransition: "ease-in",
+        buttonWidth: "one-third column",
+        buttonStatus: "clicked"
       })
     })
     .catch(error => console.log(`Error in fetch: ${error.message}`))
@@ -42,16 +46,20 @@ class QuestionIndex extends Component {
 
   render() {
     return(
-      <div>
-        <div className="oq-button-container">
-          <Button handleClick={this.handleRandomRequest} />
-        </div>
+      <div className="oq-index-page-container">
+        <div className="row">
+          <div className={`oq-button-container ${this.state.buttonWidth}`}>
+            <Button
+              buttonStatus={this.state.buttonStatus}
+              handleClick={this.handleRandomRequest}
+            />
+          </div>
 
-        <div className="oq-tile-container">
-          <QuestionTile
-            toggle={this.state.hide}
-            question={this.state.question}
-          />
+          <div className={`oq-tile-container two-thirds column ${this.state.questionTransition}`}>
+            <QuestionTile
+              question={this.state.question}
+            />
+          </div>
         </div>
       </div>
     )
