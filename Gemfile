@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby '2.4.1'
+
 gem "activerecord", "~> 4.1"
 gem "pg"
 gem "rake"
@@ -23,4 +25,8 @@ group :test do
   gem "shoulda"
   gem "shoulda-matchers", "~> 3.1", require: false
   gem "valid_attribute"
+end
+
+group :production do
+  gem "puma"
 end
