@@ -14,10 +14,6 @@ class QuestionIndex extends Component {
     this.getQuestions = this.getQuestions.bind(this);
   }
 
-  componentDidMount() {
-
-  }
-
   getQuestions() {
     fetch('/api/v1/random-question')
     .then(response => {
@@ -41,21 +37,17 @@ class QuestionIndex extends Component {
 
   handleRandomRequest(event) {
     event.preventDefault();
-
     this.getQuestions();
   }
-
 
   render() {
     return(
       <div>
-        <div>
-          <Button
-            handleClick={this.handleRandomRequest}
-          />
+        <div className="oq-button-container">
+          <Button handleClick={this.handleRandomRequest} />
         </div>
 
-        <div>
+        <div className="oq-tile-container">
           <QuestionTile
             toggle={this.state.hide}
             question={this.state.question}
