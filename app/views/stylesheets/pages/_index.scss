@@ -1,0 +1,14 @@
+.oq-index-page-container {
+  padding-top: 150px;
+
+  .oq-tile-container {
+    visibility: hidden;
+    opacity: 0;
+    @include transition(opacity .5s 2s ease-in);
+
+    &.ease-in {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

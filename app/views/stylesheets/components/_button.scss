@@ -1,0 +1,26 @@
+.oq-button-container .oq-button-primary {
+  padding: 10px 60px;
+  height: 100%;
+  background-color: $red;
+  border-color: $black;
+  border-radius: 7px;
+  border-width: 2px;
+  color: $lightGray;
+  outline: none;
+
+  @include transition(background-color 1s ease-in-out);
+  @include transition(transform .8s linear);
+
+  font: 50px $cantarell;
+
+  &:hover {
+    background-color: $white;
+    border-color: $red;
+    color: $red;
+    @include rotate(360deg);
+  }
+
+  &.clicked:hover {
+    @include rotate(0);
+  }
+}

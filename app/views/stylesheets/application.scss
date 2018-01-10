@@ -5,8 +5,5 @@
 @import "global/text";
 @import "global/colors";
 
-@import "components/hero-container";
-@import "components/nav-bar";
-@import "components/project-card";
-
-h1 { color: blue !important; }
+@import "components/button";
+@import "pages/index";

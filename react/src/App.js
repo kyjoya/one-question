@@ -8,7 +8,6 @@ const App = props => {
     <Router history={browserHistory}>
       <Route path='/' component={NavBar} >
         <IndexRoute component={QuestionIndex} />
-        {/* <Route path="questions/:id" component={}/> */}
       </Route>
     </Router>
   )
