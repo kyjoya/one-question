@@ -1,7 +1,7 @@
 task :scrape_questions do
   Question.delete_all
 
-  url = "http://www.signupgenius.com/business/icebreakerquestionswork.cfm"
+  url = "http://www.https://www.themandagies.com/101-road-trip-questions/"
   data = Nokogiri::HTML(open(url))
   questions = data.css('td.main').css('li').text.strip
 
