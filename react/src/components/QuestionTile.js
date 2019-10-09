@@ -3,7 +3,7 @@ import React from "react"
 const QuestionTile = (props) => {
   return(
     <div className="oq-tile">
-      <h1>{props.question}</h1>
+      <h3>{props.question}</h3>
     </div>
   )
 }
