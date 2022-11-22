@@ -18,7 +18,7 @@
     "jasmine-enzyme": "^1.0.0",
     "jquery": "3.0.0",
     "json-loader": "^0.5.4",
-    "karma": "^1.7.0",
+    "karma": "^6.4.1",
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
